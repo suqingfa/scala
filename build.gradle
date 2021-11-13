@@ -1,4 +1,5 @@
 plugins {
+    id 'idea'
     id 'java'
     id 'scala'
 }
@@ -10,13 +11,20 @@ repositories {
     mavenCentral()
 }
 
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
 dependencies {
     implementation 'org.scala-lang:scala-library:2.13.6'
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testImplementation 'org.scalatest:scalatest_3:3.2.10'
 
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
 
 test {
