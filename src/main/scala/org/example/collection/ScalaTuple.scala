@@ -12,5 +12,12 @@ object ScalaTuple {
     println(tuple3.productElement(1))
     println(tuple3.productElementName(1))
     println(tuple3)
+
+    val (x, y) = (1, 2)
+    println(s"($x, $y)")
+
+    for ((x, y) <- Seq((1, 'a'), (2, 'b'), (3, 'c'))) {
+      println(s"for($x, $y)")
+    }
   }
 }
